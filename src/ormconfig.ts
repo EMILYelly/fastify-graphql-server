@@ -1,5 +1,7 @@
 import { ConnectionOptions } from "typeorm";
 import { Test } from "./entities/test.entity";
+import { Cosmetic } from "./entities/cosmetic.entity";
+
 
 const config: ConnectionOptions = {
   type: "mysql",
@@ -8,8 +10,8 @@ const config: ConnectionOptions = {
   username: "root",
   password: "1234",
   database: "ryan",
-  entities: [Test],
-  synchronize: true,
+  entities: [Test, Cosmetic],
+  synchronize: false,
 };
 
 export default config;
